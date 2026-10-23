@@ -1,6 +1,6 @@
 [project]
 name = "tiny-count-min-sketch"
-version = "0.1.0"
+version = "0.1.1"
 description = "Pure-Python Count-Min Sketch for approximating item frequencies in data streams."
 requires-python = ">=3.10"
 dependencies = []
