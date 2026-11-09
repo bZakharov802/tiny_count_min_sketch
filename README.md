@@ -34,3 +34,10 @@ Because the estimate is an upper bound, collisions inflate counts. A small `widt
   - `.merge(other)` — point-wise sum another sketch of identical dimensions.
   - `.reset()` — zero all counters.
   - `.width`, `.depth`, `.total` — read-only properties.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
